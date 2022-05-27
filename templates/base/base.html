@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{% block title %}{% endblock %}</title>
+	<link rel="stylesheet" type = "text/css" media='screen' href="{% static 'main.css'%}">
+</head>
+<body>
+	
+	{% include 'base/navbar.html' %}
+	{% comment %} <ul class = "messages">
+		{% for message in messages%}
+		<li >{{message.tag}}</li>
+		{%endfor%}
+	</ul> {% endcomment %}
+	<style>
+		.content{
+			display: grid;
+			grid-template-columns: 1fr 3fr;
+		}
+	</style>
+	<div class = "content">
+		
+		<div class = "menu">
+			<ul>
+				<li><a href="{% url 'home:home'%}">Home</a></li>
+				<li><a href="{% url 'room:room'%}">Room</a></li>
+				<li><a href="{% url 'user:user'%}">User</a></li>
+			</ul>
+		</div>
+		<div>
+			{% block content  %}
+	
+	
+			{% endblock  %}
+		</div>
+	</div>
+</body>
+</html>

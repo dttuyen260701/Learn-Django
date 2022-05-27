@@ -1,0 +1,35 @@
+{% extends 'base/base.html' %}
+{% block title %}Register{% endblock  %}
+
+{% block content %}
+    {%if page == 'login'%}
+        <div>
+            <form action="" method="POST">
+                {% csrf_token %}
+
+                <label >Username: </label>
+                <input type="text" name="username" placeholder = "Enter User"/>
+            </br>
+                <label >Password: </label>
+                <input type="password" name="password" placeholder = "Enter Password"/> 
+
+                {% comment %} <label >UserName: </label>
+                <input type="text" value="username" placeholder = "Enter User"/>  {% endcomment %}
+
+                <input type = "submit" value = "Login"/>
+                <p>Haven't signed up yet?</p>
+                <a href="{% url 'home:register'%}">Register</a>
+            </form>
+        </div>
+    {%else%}
+        <div>
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{form.as_p}}
+                <input type = "submit" value = "Register"/>
+            </form>
+            <p>Already signed up yet?</p>
+            <a href="{% url 'home:login' %}">Login</a>
+        </div>
+    {%endif%}
+{% endblock %}

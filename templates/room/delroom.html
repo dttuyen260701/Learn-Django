@@ -1,0 +1,14 @@
+{% extends 'base/base.html' %}
+{% block title %}Add Form{% endblock  %}
+
+{% block content %}
+	<h1>Confirm</h1>
+	<div>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <p> Are you sure want to delete "{{obj}}" ?</p>
+            <a href="{{request.META.HTTP_REFERER}}">Go Back</a>
+            <input type="submit" value = "Confirm">
+        </form>
+	</div>
+{% endblock %}
