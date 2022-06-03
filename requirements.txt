@@ -11,8 +11,6 @@ Jinja2==3.1.2
 jmespath==1.0.0
 MarkupSafe==2.1.1
 mysqlclient==2.1.0
-numpy==1.22.4
-opencv-python==4.5.5.64
 PyMySQL==1.0.2
 python-dotenv==0.20.0
 PyYAML==6.0
