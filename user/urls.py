@@ -3,5 +3,5 @@ from django.urls import path, include
 app_name = 'user'
 urlpatterns = [
     path('', views.user, name="user"),
-    path('/<str:pk>/', views.profile, name="profile"),
+    path('pro/<str:pk>/', views.profile, name="profile"),
 ]
