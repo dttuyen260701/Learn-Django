@@ -140,6 +140,3 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATIC_ROOT = '/var/www/rycc/static'
-
-MEDIA_URL = '/media/'
-NEDUIA_ROOT = BASE_DIR.joinpath('media/')
